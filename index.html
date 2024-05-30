@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/styles.css">
+    <title>Quant Hunters</title>
+</head>
+<body>
+<header>
+    <h1><b>QUANT HUNTERS MINING</b></h1>
+</header>
+<main>
+    <h3><b>Welcome Quant Hunters</b></h3>
+    <h4><i>We are here for all the quant!</i></h4>
+    <p>
+        Welcome to Quant Hunters mining operation page! Here you can track all your mining 
+        operations with pertinent information to make sure everyone gets paid. 
+    </p>
+    <hr>
+    <p>
+        Please fill out the fields below to ensure everyone gets paid.
+    </p>
+    <form onSubmit="handlesubmit"></form>
+    <section>
+        <h3><b>Hunter's Info</b></h3>
+
+        <label for="username">Username:</label>
+        <input 
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username HERE!"
+            autocomplete="on"
+            pattern="[\W].*"
+            title="Please provide a user name"
+            required>
+            <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="email">Email:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email HERE!"
+            autocomplete="off"
+            pattern="[\w]+@[\w]+.com"
+            title="Please enter a valid email!"
+            required>
+            <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="password">Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            autocomplete="off"
+            pattern="[\w].*"
+            title="Password is not valid"
+            required>
+            <div role="alert" aria-live="assertive"></div>
+    <br>        
+    </section>
+    <hr>
+    <section>
+        <h3><b>Operation Information</b></h3>
+
+        <label for="date_of_operation">Date Of Operation</label>
+        <input
+            type="date"
+            id="date"
+            name="date"
+            min="2022-03-03"
+            required>
+            <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="planet">Planet Mined On: </label>
+        <input type="radio" id="lyria" name="planet" value="Lyria">
+        <label for="lyria">Lyria</label>
+        <input type="radio" id="hurston" name="planet" value="Hurston">
+        <label for="hurston">Hurtston</label>
+        <input type="radio" id="Daymar" name="planet" value="Daymar">
+        <label for="daymar">Daymar</label>
+        <required>
+        <br>
+
+        <label for="quant_mined">Quant Mined</label>
+        <input
+            type="number"
+            id="quant_mined"
+            name="quant_mined"
+            min="0" max="10000" step="10"
+            required>
+            <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="quant_color">What Color was the Quant?</label>
+        <input type="color" id="quant_color" name="quant_color" value="#ff0000">
+        <br>
+
+        <label for="ship_used">Ship Used</label>
+        <select name="ship_used" id="ship_used">
+            <option value="mole">Mole</option>
+            <option value="prospector">Prospector</option>
+            <div role="alert" aria-live="assertive"></div>
+        </select>
+        <br>
+
+        <label for="bits_used">Bits Used</label>
+        <input type="checkbox" id="bit1" name="bit1" value="Helix">
+        <label for="bit1">Helix</label>
+        <input type="checkbox" id="bit2" name="bit2" value="Klein">
+        <label for="bit2">Klein</label>
+        <input type="checkbox" id="bit3" name="bit3" value="Bobble">
+        <label for="bit3">Bobble</label>
+        <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="operators">Operators:</label>
+        <input 
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter Operators Username"
+            autocomplete="on"
+            pattern="[\W].*"
+            title="Please enter username of operators"
+            multiple
+            required>
+            <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="satisfaction">How satisfied were you with the op? </label>
+        <input type="range" id="satisfaction" name="satisfaction" min="0" max="5">
+        <div role="alert" aria-live="assertive"></div>
+        <br>
+
+        <label for="operation_info">Operation Information</label>
+        <br>
+        <textarea
+            id="operation_info"
+            name="operation_info"
+            rows="5"
+            cols="35"
+            placeholder="Please enter any information about the operation
+            that can help us in the future"
+            required>
+        </textarea>
+        <br>
+
+
+
+        <label for="paid_out">Operation Paid Out</label>
+        <input type="checkbox" id="paid_out" name="paid_out" value="yes">
+        <div role="alert" aria-live="assertive"></div>
+    </section>
+    <br>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+    <hr>
+    </form>
+</main> 
+<footer><i>Quant Hunters tracks all information for use by the organization.
+    The information we gather will help us better plan massive operations to ensure
+    we are in the best spots possible. HAPPY MINING&excl;
+</i></footer>
+
+<p> &copy;Quant Hunters Mining Org&period; est&period;2022-03-03</p>
+</body>
+</html>
